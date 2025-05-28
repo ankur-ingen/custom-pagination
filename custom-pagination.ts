@@ -7,6 +7,10 @@ yourTable(){
         onPaginationChanged: (params: any) => {
             this.setupCustomPagination();
         },
+         onGridReady: (params: any) => {
+          // other code
+          setTimeout(() => this.setupCustomPagination(), 10);
+        },
         // other grid options
     }
 }
