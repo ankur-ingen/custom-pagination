@@ -1,0 +1,90 @@
+::ng-deep {
+    .total-pages{
+        font-weight: 600;
+    }
+    .custom-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        margin: 20px 0;
+
+        .page-btn {
+            background-color: red;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 50%;
+            display: inline;
+            margin: 4px;
+            align-items: center;
+            justify-content: center;
+            font-family: Quicksand;
+            transition: all 0.3s ease;
+
+            &.active {
+                background: #1D4380;
+                color: white;
+                border-color: #1D4380;
+                transform: scale(1.1);
+            }
+
+            &:hover:not(.active) {
+                background: #f0f0f0;
+                border-color: #1D4380;
+                color: #1D4380;
+            }
+        }
+
+        #prevPage,
+        #nextPage {
+            padding: 5px 15px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family: Quicksand;
+
+            &:hover {
+                background: #f0f0f0;
+                border-color: #1D4380;
+                color: #1D4380;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    #firstPage,
+    #lastPage,
+    #prevPage,
+    #nextPage {
+        padding: 5px 15px;
+        border: 1px solid #ddd;
+        background: white;
+        cursor: pointer;
+        border-radius: 20px;
+        font-family: Quicksand;
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover:not(:disabled) {
+            background: #f0f0f0;
+            border-color: #1D4380;
+            color: #1D4380;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
